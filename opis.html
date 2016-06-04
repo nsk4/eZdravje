@@ -22,7 +22,7 @@
           <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
         </button>
         <!-- ZAČETEK: Ime vaše aplikacije -->
-        <a class="navbar-brand" href="index.html">{ime vaše aplikacije}</a>
+        <a class="navbar-brand" href="index.html">BMI Merilec</a>
         <!-- KONEC: Ime vaše aplikacije -->
       </div>
       <div class="collapse navbar-collapse" id="menujska-vrstica">
@@ -45,7 +45,13 @@
           </div>
           <div class="panel-body">
             <!-- ZAČETEK: Opis ideje, ki jo aplikacija podpira -->
-            <p><strong>TO-DO</strong>: Na tem mestu je potrebno dodati <strong>osnovni opis ideje rešitve</strong> (kakšen je osnovni SCENARIJ UPORABE, KDO je ciljna publika, za kakšen NAMEN se aplikacija uporablja).</p><p class="text-muted">Opis naj ne bo daljši od 200 besed.</p>
+            <p>
+              <p>BMI Merilec je stran, ki je namenjena spremljanju spreminjanja indeksa telesne mase (angl. Body Mass Index (BMI)). Uporabnik lahko preveri zgodovino zadnjih vnešenih podatkov iz katerih se mu nato izračuna BMI, poleg tega pa se mu lahko tudi izriše graf. Na vrhu strani se tudi izpiše primerjava uporabnikovega BMI z raznimi državam in sicer številčno koliko držav ima večji, manjši ali pa enak BMI. Na strani se prikaže tudi seznam z povprečnimi BMI skoraj vseh držav.</p>
+              
+              <p>Uporabnik lahko tudi vnaša podatke o svoji višini in teži ter kdaj je bila meritev opravljena. Vnose in poizvedbe dela s pomočjo unikatne številke EHR ID.</p>
+              <p>Stran je namenjena predvsem posameznikom, ki bi radi spremljali svoj BMI skozi čas in sicer na daljše obdobje večih let in je prosto dostopna na spletu. Glavni namen je posamezniku omogočiti vodenje preproste statistike o telesni masi.</p>
+
+            </p>
             <!-- KONEC: Opis ideje, ki jo aplikacija podpira -->
           </div>
         </div>
@@ -54,9 +60,15 @@
             <h3 class="panel-title">Uporabljeni zunanji viri podatkov</h3>
           </div>
           <div class="panel-body">
-            <!-- ZAČETEK: Uporabljeni zunanji viri podatkov -->
-            <p><strong>TO-DO</strong>: Na tem mestu je navesti zunanji vir podatkov (URL naslov), na kakšen način ste ga uporabili (neposredni API klic, uvožena statična datoteka ipd.) in kaj je bil namen uporabe (kako se vključuje v osnovno idejo aplikacije).</p>
-            <!-- KONEC: Uporabljeni zunanji viri podatkov -->
+            <p>
+              
+              <p><a href="http://apps.who.int/gho/data/node.main.A904?lang=en">http://apps.who.int/gho/data/node.main.A904?lang=en</a></p>
+
+              <p>Zunanji vir podatkov je bil uporabljen z spletnega mesta svetovne zdravstvene organizacije.</p>
+              <p>Podatku so bili uvoženi preko XML datoteke.</p>
+              <p>Uvoženi podatki predstavljajo statistične podatke raznih držav o njihovem povprečnem BMI. Ti podatki se filtrirajo in prikažejo na spletni strani kot seznam, ter s tem ponudijo uporabniku dodatko informacijo o povprečju drugih držav. Poleg tega se jih tudi uporabi za primerjavo med BMI držav in uporabnika.</p>
+              
+            </p>
           </div>
         </div>
         <div class="panel panel-default">
@@ -64,9 +76,10 @@
             <h3 class="panel-title">Master/detail načrtovalski vzorec</h3>
           </div>
           <div class="panel-body">
-            <!-- ZAČETEK: Master/detail načrtovalski vzorec -->
-            <p><strong>TO-DO</strong>: Na tem mestu morate navesti uporabljen master/detail načrtovalski vzorec in na kakšen način ga nameravate uporabiti.</p>
-            <!-- KONEC: Master/detail načrtovalski vzorec -->
+            
+              <p>Seznam o uporabnikovi višini, teži, BMI in leto meritve se uporabi kot master seznam.</p>
+              <p>Nato lahko uporabnik z miško hovera čez točke v grafu in pojavijo se mu tooltipi kjer se mu izpišeta (poleg BMI in letnice) še višina in teža (kot detail del).</p>
+            
           </div>
         </div>
         <div class="panel panel-default">
@@ -74,9 +87,10 @@
             <h3 class="panel-title">Uporabljena tehnika za vizualizacijo podatkov</h3>
           </div>
           <div class="panel-body">
-            <!-- ZAČETEK: Uporabljeni zunanji viri podatkov -->
-            <p><strong>TO-DO</strong>: Na tem mestu je potrebno navesti uporabljeno tehniko vizualizacije podatkov (za pomoč lahko uporabite primer iz <a href="https://github.com/mbostock/d3/wiki/Gallery" target="_blank">D3.js galerije</a>) in zakaj je bila ta tehnika izbrana.</p>
-            <!-- KONEC: Uporabljeni zunanji viri podatkov -->
+            
+            <p>Za vizualizacijo sem uporabil graf iz D3.js galerije in sicer rahlo spremenjen tako, da omogoča hover tooltipe.</p>
+            <p>Glavno koda za graf je prišla od tukaj: <a href="http://bl.ocks.org/bobmonteverde/2070123">http://bl.ocks.org/bobmonteverde/2070123</a></p>
+            
           </div>
         </div>
       </div>

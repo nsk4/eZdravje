@@ -41,38 +41,42 @@
       <div class="col-lg-12 text-center">
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title">Diagram primerov uporabe</h3>
+            <h3 class="panel-title">Vnos podatkov</h3>
+            		
           </div>
           <div class="panel-body">
-            <!-- ZAČETEK: Diagram primerov uporabe -->
-            <img src="plan/use case.png">
-            <!-- KONEC: Diagram primerov uporabe -->
+            <div class="row">
+				
+				<div class="col-lg-6 col-md-6 col-sm-6">
+				    <span class="label label-default">EHR ID</span>
+				    <input id="meritevEHRId" type="text" class="form-control input-mini" placeholder="ffad70a2-b1a2-4f2a-a43a-276ff634b9fa">
+				    <br />
+				    <span class="label label-default">Datum</span>
+				    <input id="meritevDatum" type="text" class="form-control input-mini" placeholder="1999-09-29T19:19">
+					
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6">
+				    <span class="label label-default">Višina</span>
+				    <input id="meritevVisina" type="text" class="form-control input-mini" placeholder="180">
+					<br />
+					<span class="label label-default">Teža</span>
+				    <input id="meritevTeza" type="text" class="form-control input-mini" placeholder="80">
+				</div>
+			</div>
+			<br />
+			<div class="row">
+			    <div class="col-lg-12 col-md-12 col-sm-12">
+			        <button type="button" class="btn btn-primary btn-xs" onclick="vnosMeritev()">Vnesi podatke</button><span id="vnosMeritevSporocilo"></span>
+		            <div id="vnosMeritevRezultat"></div>
+			    </div>
+			</div>
+			
           </div>
         </div>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title">Razredni diagram</h3>
-          </div>
-          <div class="panel-body">
-            <!-- ZAČETEK: Razredni diagram -->
-            <img src="plan/razredni diagram.png">
-            <!-- KONEC: Razredni diagram -->
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title">Diagram zaporedja</h3>
-          </div>
-          <div class="panel-body">
-            <!-- ZAČETEK: Diagram zaporedja -->
-            <img src="plan/sequence.png">
-            <!-- KONEC: Diagram zaporedja -->
-          </div>
-        </div
+        
       </div>
     </div>
   </div>
-  <!-- KONEC: Načrt informacijske rešitve -->
 
 </body>
 </html>

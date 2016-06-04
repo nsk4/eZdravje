@@ -1,0 +1,66 @@
+<<boundary>>
+index
++ String preberiEhrIdZaVitalneZnake
++ String meritveVitalnihZnakovEHRid
+
++ generiraj()
++ izracunIndexTelesneMase()
++ graphBMI()
++ pocistiGraphBMI()
+
+
+
+<<boundary>>
+vnos
++ String meritevEHRId
++ Int meritevVisina
++ String meritevDatum
++ Int meritevTeza
+
++ vnosMeritev()
+
+
+<<control>>
+koda
+- String baseUrl
+- String queryUrl
+- String username
+- String password
+- Int_array items
+- Int_array visina
+- Int_array teza
+- Int_array dat
+- Int_array gBMI
+- Int manj
+- Int vec
+- Float scale
+
+# getSessionId()
+- generirajPodatke(Int stPacienta)
++ generiraj()
+- String kreirajNovEhr(String ime, String priimek, String datumRojstva)
++ vnosMeritev()
+- pridobiStatisticnePodatke()
++ izracunIndexTelesneMase()
++ graphBMI()
+- log(String text)
++ pocistiGraphBMI()
+- grafFunkcija()
+- Int width(Int margin)
+- Int height(Int margin)
+- sortFunction(Int a, Int b)
+- generateData()
++ $(window).resize(function callback)
++ $(document).ready(function callback)
+
+EHRScape API
+<<boundary>>
+# https://rest.ehrscape.com/rest/v1/
+
++ String session(String username, String password)
++ JSON_object demographics/EHR/EHRid/parity (String sessionID, String EHRid)
++ JSON_array view/EHRid/weight(String sessionID, String EHRid)
++ JSON_array view/EHRid/height(String sessionID, String EHRid)
+
+
+
